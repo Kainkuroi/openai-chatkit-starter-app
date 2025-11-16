@@ -348,7 +348,6 @@ export function ChatKitPanel({
       <ChatKit
         key={widgetInstanceKey}
         control={chatkit.control}
-        header={{ visible: false }} 
         className={
           blockingError || isInitializingSession
             ? "pointer-events-none opacity-0"
