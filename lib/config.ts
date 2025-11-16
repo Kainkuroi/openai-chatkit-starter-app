@@ -5,12 +5,16 @@ export const WORKFLOW_ID =
 
 export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
-export const STARTER_PROMPTS: StartScreenPrompt[] = [
-];
+// REMOVE starter prompts completely
+export const STARTER_PROMPTS: StartScreenPrompt[] = [];
+
+// Keep greeting or set your own
+export const GREETING = "How can I help you today?";
 
 export const PLACEHOLDER_INPUT = "Ask anything...";
 
-export const GREETING = "How can I help you today?";
+// HIDE conversation header/title bar
+export const HEADER = false;
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
@@ -25,6 +29,9 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
     },
   },
   radius: "round",
-  // Add other theme options here
-  // chatkit.studio/playground to explore config options
+
+  // Add header override to remove title
+  header: {
+    visible: false,
+  },
 });
