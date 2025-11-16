@@ -1,3 +1,4 @@
+header: { visible: false }
 import { ColorScheme, StartScreenPrompt, ThemeOption } from "@openai/chatkit";
 
 export const WORKFLOW_ID =
