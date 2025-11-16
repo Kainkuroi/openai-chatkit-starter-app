@@ -4,18 +4,18 @@ const options: ChatKitOptions = {
   api: {
     // TODO: configure your ChatKit API integration (URL, auth, uploads).
   },
-
   theme: {
     colorScheme: 'light',
     radius: 'pill',
     density: 'spacious',
     color: {
       grayscale: {
-        hue: 113,
-        tint: 6
+        hue: 140,
+        tint: 7,
+        shade: 1
       },
       accent: {
-        primary: '#126320',
+        primary: '#1b5f1c',
         level: 1
       }
     },
@@ -31,25 +31,29 @@ const options: ChatKitOptions = {
           style: 'normal',
           display: 'swap'
         }
+      // ...and 7 more font sources
       ]
     }
   },
-
   composer: {
+    placeholder: ' ',
     attachments: {
-      enabled: true,
-      maxCount: 5,
-      maxSize: 10485760
+      enabled: false
     },
-    tools: [],
+    tools: [
+      {
+        id: 'create_theme',
+        label: 'Create theme',
+        shortLabel: 'Theme',
+        placeholderOverride: 'Describe your chat application',
+        icon: 'sparkle-double',
+        pinned: false
+      }
+    ],
   },
-
   startScreen: {
-    greeting: '',
-    prompts: [],        // REMOVE all default prompts
+    greeting: ' ',
+    prompts: [],
   },
-
-  header: false,        // HIDE conversation title like “Eager to Learn More”
+  // Optional fields not shown: locale, initialThread, threadItemActions, header, onClientTool, entities, widgets
 };
-
-export default options;
